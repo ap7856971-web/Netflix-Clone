@@ -1,225 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Clone</title>
 
-  <title>netflix</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar">
+    <!-- Background -->
+    <div class="hero">
 
-    <div class="logo">
-      NETFLIX
+        <!-- Navbar -->
+        <header class="navbar">
+
+            <div class="logo">NETFLIX</div>
+
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">TV Shows</a>
+                <a href="#">Movies</a>
+                <a href="#">New & Popular</a>
+                <a href="#">My List</a>
+            </nav>
+
+            <div class="nav-right">
+
+                <button class="language">
+                    🌐 English
+                    <span>⌄</span>
+                </button>
+
+                <button class="sign-in">
+                    Sign In
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- Hero Content -->
+        <main class="hero-content">
+
+            <div class="hero-text">
+
+                <h1>
+                    Unlimited<br>
+                    movies, TV shows<br>
+                    and more
+                </h1>
+
+                <h2>
+                    Watch anywhere. Cancel anytime.
+                </h2>
+
+                <p>
+                    Ready to watch? Enter your email to create or restart
+                    your membership.
+                </p>
+
+                <div class="email-box">
+
+                    <input
+                        type="email"
+                        placeholder="Email address"
+                    >
+
+                    <button>
+                        Get Started
+                        <span>›</span>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </main>
+
     </div>
 
-    <div class="nav-links">
-      <a href="#">Home</a>
-      <a href="#movies">Movies</a>
-      <a href="#series">Series</a>
-      <a href="#trending">Trending</a>
-    </div>
 
-    <div class="nav-right">
+    <!-- Trending Section -->
+    <section class="trending">
 
-      <div class="search">
-        <input
-          type="text"
-          id="searchInput"
-          placeholder="Search..."
-        />
-        <span>🔍</span>
-      </div>
+        <h2>Trending Now on Netflix</h2>
 
-      <button class="login-btn">
-        Login
-      </button>
+        <div class="movie-row">
 
-    </div>
+            <div class="movie-card">
+                <img src="https://image.tmdb.org/t/p/w500/1QdXdRYfktUSONkl1oD5gc6H0EV.jpg">
+                <span class="n-logo">N</span>
+            </div>
 
-  </nav>
+            <div class="movie-card">
+                <img src="https://image.tmdb.org/t/p/w500/ccqvY1QfZB7NQvB5n9xR8V9K9rB.jpg">
+                <span class="n-logo">N</span>
+            </div>
 
+            <div class="movie-card">
+                <img src="https://image.tmdb.org/t/p/w500/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg">
+                <span class="n-logo">N</span>
+            </div>
 
-  <!-- HERO -->
-  <section class="hero">
+            <div class="movie-card">
+                <img src="https://image.tmdb.org/t/p/w500/lu7xZlh6bQW4gFh7yV4u5l4k8w.jpg">
+                <span class="n-logo">N</span>
+            </div>
 
-    <div class="hero-content">
+            <div class="movie-card">
+                <img src="https://image.tmdb.org/t/p/w500/ekZobS8TgELF3V2n4kJp6M2qJ7.jpg">
+                <span class="n-logo">N</span>
+            </div>
 
-      <p class="featured">
-        #1 IN MOVIES TODAY
-      </p>
+            <div class="movie-card">
+                <img src="https://image.tmdb.org/t/p/w500/1pb6K2d9ZbY8w9N6M8dR4L9Y6G.jpg">
+                <span class="n-logo">N</span>
+            </div>
 
-      <h1>THE LAST<br>ADVENTURE</h1>
+            <button class="next">
+                ›
+            </button>
 
-      <div class="movie-info">
-        <span>2026</span>
-        <span>16+</span>
-        <span>2h 18m</span>
-        <span>Action</span>
-      </div>
-
-      <p class="description">
-        A fearless hero begins an impossible journey across
-        a mysterious world where every decision could change
-        the future.
-      </p>
-
-      <div class="hero-buttons">
-
-        <button class="play-btn">
-          ▶ Play
-        </button>
-
-        <button class="info-btn">
-          ⓘ More Info
-        </button>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- MOVIES -->
-  <main id="movies">
-
-    <section class="movie-section" id="trending">
-
-      <h2>Trending Now</h2>
-
-      <div class="movie-row">
-
-        <div class="movie-card">
-          <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?w=500">
-          <div class="movie-title">Dark World</div>
         </div>
-
-        <div class="movie-card">
-          <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=500">
-          <div class="movie-title">Lost Island</div>
-        </div>
-
-        <div class="movie-card">
-          <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=500">
-          <div class="movie-title">The Journey</div>
-        </div>
-
-        <div class="movie-card">
-          <img src="https://images.unsplash.com/photo-1534791547706-1e9a7fb5c5e1?w=500">
-          <div class="movie-title">Future City</div>
-        </div>
-
-        <div class="movie-card">
-          <img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?w=500">
-          <div class="movie-title">Night Sky</div>
-        </div>
-
-        <div class="movie-card">
-          <img src="https://images.unsplash.com/photo-1511497584788-876760111969?w=500">
-          <div class="movie-title">Wild Nature</div>
-        </div>
-
-      </div>
 
     </section>
 
 
-    <!-- ACTION -->
-    <section class="movie-section">
-
-      <h2>Action Movies</h2>
-
-      <div class="movie-row">
-
-        <div class="movie-card">
-          <img src="https://images.unsplash.com/photo-1518709594023-6eab9bab7b23?w=500">
-          <div class="movie-title">Warrior</div>
-        </div>
-
-        <div class="movie-card">
-          <img src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=500">
-          <div class="movie-title">Mission X</div>
-        </div>
-
-        <div class="movie-card">
-          <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?w=500">
-          <div class="movie-title">Escape</div>
-        </div>
-
-        <div class="movie-card">
-          <img src="https://images.unsplash.com/photo-1518709594023-6eab9bab7b23?w=500">
-          <div class="movie-title">Revenge</div>
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- SERIES -->
-    <section class="movie-section" id="series">
-
-      <h2>Popular Series</h2>
-
-      <div class="movie-row">
-
-        <div class="movie-card">
-          <img src="https://images.unsplash.com/photo-1516339901601-2e1b62dc0c45?w=500">
-          <div class="movie-title">Space</div>
-        </div>
-
-        <div class="movie-card">
-          <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?w=500">
-          <div class="movie-title">The Detective</div>
-        </div>
-
-        <div class="movie-card">
-          <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?w=500">
-          <div class="movie-title">Mystery</div>
-        </div>
-
-        <div class="movie-card">
-          <img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?w=500">
-          <div class="movie-title">Beyond</div>
-        </div>
-
-      </div>
-
-    </section>
-
-  </main>
-
-
-  <!-- FOOTER -->
-  <footer>
-
-    <h2>NETFLIX</h2>
-
-    <p>
-      Stream movies and series anytime, anywhere.
-    </p>
-
-    <div class="footer-links">
-      <span>FAQ</span>
-      <span>Help Center</span>
-      <span>Privacy</span>
-      <span>Terms</span>
-    </div>
-
-    <p class="copyright">
-      © 2026 NETFlix
-    </p>
-
-  </footer>
-
-
-  <script src="script.js"></script>
+    <!-- Bottom gradient -->
+    <div class="bottom-gradient"></div>
 
 </body>
 </html>
