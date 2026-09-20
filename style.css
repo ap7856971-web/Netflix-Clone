@@ -716,3 +716,43 @@ body {
         font-size: 22px;
     }
 }
+
+
+/* Netflix-style ranking cards */
+.movie-card{
+  position:relative !important;
+  flex:0 0 240px !important;
+  width:240px !important;
+  height:335px !important;
+  overflow:visible !important;
+  border-radius:10px !important;
+  background:#111 !important;
+}
+.movie-card img{
+  width:100% !important;
+  height:100% !important;
+  object-fit:cover !important;
+  object-position:center !important;
+  border-radius:10px !important;
+  display:block !important;
+  background:#111 !important;
+}
+.movie-card .rank{
+  position:absolute;
+  left:-18px;
+  bottom:-10px;
+  z-index:4;
+  font-size:150px;
+  line-height:.78;
+  font-weight:900;
+  color:#000;
+  -webkit-text-stroke:3px #fff;
+  text-shadow:0 4px 10px rgba(0,0,0,.8);
+  pointer-events:none;
+}
+@media(max-width:850px){
+  .movie-card{flex-basis:210px !important;width:210px !important;height:295px !important}
+}
+@media(max-width:600px){
+  .movie-card{flex-basis:175px !important;width:175px !important;height:250px !important}
+}
