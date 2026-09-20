@@ -41,7 +41,7 @@ body {
 }
 
 
-/* Netflix Logo */
+/* Project Logo */
 
 .logo {
     color: #e50914;
@@ -163,9 +163,7 @@ body {
     align-items: center;
 
 
-    /*
-       YOUR NETFLIX BACKGROUND
-    */
+    /* Self-contained demo background — no third-party background resource */
 
     background-image:
 
@@ -187,7 +185,7 @@ body {
             #000 100%
         ),
 
-        url("https://assets.nflxext.com/ffe/siteui/vlv3/4a59f124-030b-417a-9565-8362f395bdb0/web/IN-en-20260914-TRIFECTA-perspective_16ddf2ab-4945-4e79-8f84-6df3eef26875_large.jpg");
+        linear-gradient(120deg, #070707 0%, #111 42%, #241313 72%, #050505 100%);
 
     background-size: cover;
 
