@@ -632,3 +632,80 @@ body {
 .poster-five {background:linear-gradient(145deg,#17232c,#354b5a 45%,#090909)}
 .poster-six {background:linear-gradient(145deg,#51402e,#111 55%,#222)}
 .movie-card::after {content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,rgba(0,0,0,.82));pointer-events:none}
+
+
+/* v4 fallback: hide broken legacy poster images and render stable poster artwork */
+.movie-card img {
+  display: none !important;
+}
+
+.movie-card:has(img) {
+  display: flex;
+  align-items: flex-end;
+  padding: 18px;
+  background-size: cover;
+  background-position: center;
+}
+
+.movie-card:has(img)::before {
+  position: absolute;
+  left: 18px;
+  bottom: 18px;
+  right: 12px;
+  z-index: 2;
+  color: #fff;
+  font-size: 21px;
+  line-height: 1.05;
+  font-weight: 800;
+  letter-spacing: .5px;
+  text-shadow: 0 2px 8px #000;
+}
+
+.movie-card:has(img)::after {
+  z-index: 1;
+}
+
+.movie-card:nth-child(1):has(img) {
+  background: linear-gradient(160deg, #111a35, #7d1524 55%, #070707);
+}
+.movie-card:nth-child(1):has(img)::before {
+  content: "STRANGER\A THINGS";
+  white-space: pre;
+}
+
+.movie-card:nth-child(2):has(img) {
+  background: linear-gradient(145deg, #18243c, #526b8b 42%, #070707);
+}
+.movie-card:nth-child(2):has(img)::before {
+  content: "WEDNESDAY";
+}
+
+.movie-card:nth-child(3):has(img) {
+  background: linear-gradient(145deg, #c51d28, #1c2740 45%, #080808);
+}
+.movie-card:nth-child(3):has(img)::before {
+  content: "DEADPOOL & WOLVERINE";
+}
+
+.movie-card:nth-child(4):has(img) {
+  background: linear-gradient(145deg, #334d36, #111 55%, #1c283d);
+}
+.movie-card:nth-child(4):has(img)::before {
+  content: "THE\A WITCHER";
+  white-space: pre;
+}
+
+.movie-card:nth-child(5):has(img) {
+  background: linear-gradient(145deg, #17232c, #354b5a 45%, #090909);
+}
+.movie-card:nth-child(5):has(img)::before {
+  content: "LUPIN";
+}
+
+.movie-card:nth-child(6):has(img) {
+  background: linear-gradient(145deg, #51402e, #111 55%, #222);
+}
+.movie-card:nth-child(6):has(img)::before {
+  content: "PEAKY\A BLINDERS";
+  white-space: pre;
+}
