@@ -1,4 +1,4 @@
-const emailInput = document.getElementById("emailInput");
+const emailInput = document.getElementById("email");
 const getStarted = document.getElementById("getStarted");
 
 getStarted?.addEventListener("click", () => {
@@ -13,11 +13,11 @@ getStarted?.addEventListener("click", () => {
     alert("Please enter a valid email address.");
     return;
   }
-  alert("Demo only: welcome to Netflix Clone!");
+  alert("Demo only — this is a fan-made Netflix Clone educational project.");
 });
 
 document.querySelector(".sign-in")?.addEventListener("click", () => {
-  alert("Demo Sign In");
+  alert("Demo Login — no real account or password is collected.");
 });
 
 document.querySelectorAll(".movie-card").forEach(card => {
