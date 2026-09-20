@@ -646,3 +646,174 @@ body {
 .movie-card::before {
   content: none !important;
 }
+
+
+/* v6: cinematic Netflix-style collage layout */
+.hero {
+  min-height: 720px;
+  background:
+    linear-gradient(90deg, rgba(0,0,0,.98) 0%, rgba(0,0,0,.82) 30%, rgba(0,0,0,.45) 58%, rgba(0,0,0,.72) 100%),
+    linear-gradient(180deg, rgba(0,0,0,.05) 48%, #050505 100%);
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: -55px -30px 0 34%;
+  z-index: 0;
+  opacity: .72;
+  transform: rotate(-3deg) scale(1.05);
+  filter: brightness(.62) saturate(1.15);
+  background-repeat: no-repeat;
+  background-image:
+    url("assets/poster-stranger-things.svg"),
+    url("assets/poster-wednesday.svg"),
+    url("assets/poster-deadpool.svg"),
+    url("assets/poster-witcher.svg"),
+    url("assets/poster-lupin.svg"),
+    url("assets/poster-peaky-blinders.svg");
+  background-size:
+    250px 350px,
+    250px 350px,
+    250px 350px,
+    250px 350px,
+    250px 350px,
+    250px 350px;
+  background-position:
+    4% 3%,
+    35% 2%,
+    68% 0%,
+    18% 52%,
+    50% 50%,
+    82% 48%;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(0,0,0,.98) 0%, rgba(0,0,0,.78) 28%, rgba(0,0,0,.08) 68%, rgba(0,0,0,.28) 100%),
+    linear-gradient(180deg, transparent 58%, #050505 100%);
+}
+
+.navbar,
+.hero-content {
+  position: relative;
+  z-index: 3;
+}
+
+.hero-content {
+  min-height: 610px;
+  padding-left: 88px;
+  align-items: center;
+}
+
+.hero-text {
+  max-width: 680px;
+  margin-top: -10px;
+}
+
+.hero-text h1 {
+  font-size: clamp(48px, 5vw, 72px);
+  line-height: 1.03;
+  text-shadow: 0 4px 20px rgba(0,0,0,.55);
+}
+
+.hero-text h2 {
+  font-size: 28px;
+}
+
+.trending {
+  margin-top: -28px;
+  padding: 0 64px 70px;
+  position: relative;
+  z-index: 5;
+}
+
+.trending h2 {
+  font-size: 27px;
+  margin-bottom: 20px;
+}
+
+.movie-row {
+  gap: 18px;
+  overflow: hidden;
+  padding: 4px 0 12px;
+}
+
+.movie-card {
+  flex: 0 0 230px;
+  height: 132px;
+  border-radius: 8px;
+  background: #151515;
+  overflow: hidden;
+}
+
+.movie-card img {
+  display: block !important;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform .3s ease, filter .3s ease;
+}
+
+.movie-card:hover img {
+  transform: scale(1.06);
+  filter: brightness(1.08);
+}
+
+.movie-card::before {
+  content: none !important;
+}
+
+.n-logo {
+  z-index: 3;
+  font-size: 27px;
+}
+
+.next {
+  right: 0;
+  width: 58px;
+  height: 82px;
+  background: rgba(0,0,0,.72);
+}
+
+@media (max-width: 850px) {
+  .hero::before {
+    inset-left: 15%;
+    opacity: .38;
+  }
+  .hero-content {
+    min-height: 620px;
+    padding: 60px 30px;
+  }
+  .trending {
+    padding: 0 25px 50px;
+  }
+  .movie-card {
+    flex-basis: 205px;
+    height: 118px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    min-height: 690px;
+  }
+  .hero::before {
+    inset: 0 -30px 0 5%;
+    opacity: .25;
+  }
+  .hero-text h1 {
+    font-size: 42px;
+  }
+  .movie-card {
+    flex-basis: 180px;
+    height: 105px;
+  }
+}
