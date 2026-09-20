@@ -1,140 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Netflix Clone</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Netflix Clone</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=3">
 </head>
-
 <body>
+<div class="hero">
+<header class="navbar">
+<div class="logo">NETFLIX</div>
+<nav>
+<a href="#">Home</a><a href="#">TV Shows</a><a href="#">Movies</a><a href="#">New &amp; Popular</a><a href="#">My List</a>
+</nav>
+<div class="nav-right">
+<button class="language">🌐 English <span>⌄</span></button>
+<button class="sign-in">Sign In</button>
+</div>
+</header>
 
-    <!-- Background -->
-    <div class="hero">
+<main class="hero-content">
+<div class="hero-text">
+<h1>Unlimited<br>movies, TV shows<br>and more</h1>
+<h2>Watch anywhere. Cancel anytime.</h2>
+<p>Ready to watch? Enter your email to create or restart your membership.</p>
+<div class="email-box">
+<input id="emailInput" type="email" placeholder="Email address">
+<button id="getStarted">Get Started <span>›</span></button>
+</div>
+</div>
+</main>
+</div>
 
-        <!-- Navbar -->
-        <header class="navbar">
+<section class="trending">
+<h2>Trending Now on Netflix</h2>
+<div class="movie-row">
+<div class="movie-card poster-one"><span class="n-logo">N</span><strong>STRANGER<br>THINGS</strong></div>
+<div class="movie-card poster-two"><span class="n-logo">N</span><strong>WEDNESDAY</strong></div>
+<div class="movie-card poster-three"><span class="n-logo">N</span><strong>DEADPOOL<br>&amp; WOLVERINE</strong></div>
+<div class="movie-card poster-four"><span class="n-logo">N</span><strong>THE<br>WITCHER</strong></div>
+<div class="movie-card poster-five"><span class="n-logo">N</span><strong>LUPIN</strong></div>
+<div class="movie-card poster-six"><span class="n-logo">N</span><strong>PEAKY<br>BLINDERS</strong></div>
+<button class="next" aria-label="Next">›</button>
+</div>
+</section>
+<div class="bottom-gradient"></div>
 
-            <div class="logo">NETFLIX</div>
-
-            <nav>
-                <a href="#">Home</a>
-                <a href="#">TV Shows</a>
-                <a href="#">Movies</a>
-                <a href="#">New & Popular</a>
-                <a href="#">My List</a>
-            </nav>
-
-            <div class="nav-right">
-
-                <button class="language">
-                    🌐 English
-                    <span>⌄</span>
-                </button>
-
-                <button class="sign-in">
-                    Sign In
-                </button>
-
-            </div>
-
-        </header>
-
-
-        <!-- Hero Content -->
-        <main class="hero-content">
-
-            <div class="hero-text">
-
-                <h1>
-                    Unlimited<br>
-                    movies, TV shows<br>
-                    and more
-                </h1>
-
-                <h2>
-                    Watch anywhere. Cancel anytime.
-                </h2>
-
-                <p>
-                    Ready to watch? Enter your email to create or restart
-                    your membership.
-                </p>
-
-                <div class="email-box">
-
-                    <input
-                        type="email"
-                        placeholder="Email address"
-                    >
-
-                    <button>
-                        Get Started
-                        <span>›</span>
-                    </button>
-
-                </div>
-
-            </div>
-
-        </main>
-
-    </div>
-
-
-    <!-- Trending Section -->
-    <section class="trending">
-
-        <h2>Trending Now on Netflix</h2>
-
-        <div class="movie-row">
-
-            <div class="movie-card">
-                <img src="https://image.tmdb.org/t/p/w500/1QdXdRYfktUSONkl1oD5gc6H0EV.jpg">
-                <span class="n-logo">N</span>
-            </div>
-
-            <div class="movie-card">
-                <img src="https://image.tmdb.org/t/p/w500/ccqvY1QfZB7NQvB5n9xR8V9K9rB.jpg">
-                <span class="n-logo">N</span>
-            </div>
-
-            <div class="movie-card">
-                <img src="https://image.tmdb.org/t/p/w500/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg">
-                <span class="n-logo">N</span>
-            </div>
-
-            <div class="movie-card">
-                <img src="https://image.tmdb.org/t/p/w500/lu7xZlh6bQW4gFh7yV4u5l4k8w.jpg">
-                <span class="n-logo">N</span>
-            </div>
-
-            <div class="movie-card">
-                <img src="https://image.tmdb.org/t/p/w500/ekZobS8TgELF3V2n4kJp6M2qJ7.jpg">
-                <span class="n-logo">N</span>
-            </div>
-
-            <div class="movie-card">
-                <img src="https://image.tmdb.org/t/p/w500/1pb6K2d9ZbY8w9N6M8dR4L9Y6G.jpg">
-                <span class="n-logo">N</span>
-            </div>
-
-            <button class="next">
-                ›
-            </button>
-
-        </div>
-
-    </section>
-
-
-    <!-- Bottom gradient -->
-    <div class="bottom-gradient"></div>
-
+<script src="script.js?v=3"></script>
 </body>
 </html>
