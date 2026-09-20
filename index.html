@@ -7,48 +7,61 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=4">
+<link rel="stylesheet" href="style.css?v=8">
 </head>
 <body>
 <div class="hero">
-<header class="navbar">
-<div class="logo">NETFLIX</div>
-<nav>
-<a href="#">Home</a><a href="#">TV Shows</a><a href="#">Movies</a><a href="#">New &amp; Popular</a><a href="#">My List</a>
-</nav>
-<div class="nav-right">
-<button class="language">🌐 English <span>⌄</span></button>
-<button class="sign-in">Sign In</button>
-</div>
-</header>
+  <div class="hero-collage" aria-hidden="true">
+    <img class="collage-card c1" src="assets/poster-stranger-things.svg" alt="">
+    <img class="collage-card c2" src="assets/poster-wednesday.svg" alt="">
+    <img class="collage-card c3" src="assets/poster-deadpool.svg" alt="">
+    <img class="collage-card c4" src="assets/poster-witcher.svg" alt="">
+    <img class="collage-card c5" src="assets/poster-lupin.svg" alt="">
+    <img class="collage-card c6" src="assets/poster-peaky-blinders.svg" alt="">
+  </div>
 
-<main class="hero-content">
-<div class="hero-text">
-<h1>Unlimited<br>movies, TV shows<br>and more</h1>
-<h2>Watch anywhere. Cancel anytime.</h2>
-<p>Ready to watch? Enter your email to create or restart your membership.</p>
-<div class="email-box">
-<input id="emailInput" type="email" placeholder="Email address">
-<button id="getStarted">Get Started <span>›</span></button>
-</div>
-</div>
-</main>
+  <header class="navbar">
+    <div class="logo">NETFLIX</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">TV Shows</a>
+      <a href="#">Movies</a>
+      <a href="#">New &amp; Popular</a>
+      <a href="#">My List</a>
+    </nav>
+    <div class="nav-right">
+      <button class="language">🌐 English <span>⌄</span></button>
+      <button class="sign-in">Sign In</button>
+    </div>
+  </header>
+
+  <main class="hero-content">
+    <div class="hero-text">
+      <h1>Unlimited<br>movies, TV shows<br>and more</h1>
+      <h2>Watch anywhere. Cancel anytime.</h2>
+      <p>Ready to watch? Enter your email to create or restart your membership.</p>
+      <div class="email-box">
+        <input id="emailInput" type="email" placeholder="Email address">
+        <button id="getStarted">Get Started <span>›</span></button>
+      </div>
+    </div>
+  </main>
 </div>
 
 <section class="trending">
-<h2>Trending Now on Netflix</h2>
-<div class="movie-row">
-<div class="movie-card"><img src="assets/poster-stranger-things.svg" alt="Stranger Things poster"></div>
-<div class="movie-card"><img src="assets/poster-wednesday.svg" alt="Wednesday poster"></div>
-<div class="movie-card"><img src="assets/poster-deadpool.svg" alt="Deadpool and Wolverine poster"></div>
-<div class="movie-card"><img src="assets/poster-witcher.svg" alt="The Witcher poster"></div>
-<div class="movie-card"><img src="assets/poster-lupin.svg" alt="Lupin poster"></div>
-<div class="movie-card"><img src="assets/poster-peaky-blinders.svg" alt="Peaky Blinders poster"></div>
-<button class="next" aria-label="Next">›</button>
-</div>
+  <h2>Trending Now on Netflix</h2>
+  <div class="movie-row">
+    <div class="movie-card"><img src="assets/poster-stranger-things.svg" alt="Stranger Things"></div>
+    <div class="movie-card"><img src="assets/poster-wednesday.svg" alt="Wednesday"></div>
+    <div class="movie-card"><img src="assets/poster-deadpool.svg" alt="Deadpool and Wolverine"></div>
+    <div class="movie-card"><img src="assets/poster-witcher.svg" alt="The Witcher"></div>
+    <div class="movie-card"><img src="assets/poster-lupin.svg" alt="Lupin"></div>
+    <div class="movie-card"><img src="assets/poster-peaky-blinders.svg" alt="Peaky Blinders"></div>
+    <button class="next" aria-label="Next">›</button>
+  </div>
 </section>
-<div class="bottom-gradient"></div>
 
-<script src="script.js?v=4"></script>
+<div class="bottom-gradient"></div>
+<script src="script.js?v=5"></script>
 </body>
 </html>
