@@ -611,3 +611,24 @@ body {
         font-size: 22px;
     }
 }
+
+
+/* v3 cache-safe poster cards */
+.movie-card {
+  display:flex;
+  align-items:flex-end;
+  justify-content:flex-start;
+  padding:18px;
+  color:#fff;
+  background-size:cover;
+  background-position:center;
+  text-shadow:0 2px 8px #000;
+}
+.movie-card strong {font-size:21px;line-height:1.05;letter-spacing:.5px;position:relative;z-index:2}
+.poster-one {background:linear-gradient(160deg,#10172c,#7b1521 55%,#080808)}
+.poster-two {background:linear-gradient(145deg,#18243c,#415b79 42%,#070707)}
+.poster-three {background:linear-gradient(145deg,#c41e27,#1c2740 45%,#080808)}
+.poster-four {background:linear-gradient(145deg,#334d36,#111 55%,#1c283d)}
+.poster-five {background:linear-gradient(145deg,#17232c,#354b5a 45%,#090909)}
+.poster-six {background:linear-gradient(145deg,#51402e,#111 55%,#222)}
+.movie-card::after {content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,rgba(0,0,0,.82));pointer-events:none}
