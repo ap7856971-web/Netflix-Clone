@@ -756,3 +756,103 @@ body {
 @media(max-width:600px){
   .movie-card{flex-basis:175px !important;width:175px !important;height:250px !important}
 }
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.site-footer{
+    background:#000;
+    color:#b3b3b3;
+    padding:70px 0 65px;
+    border-top:1px solid #111;
+}
+
+.footer-inner{
+    width:min(1090px,calc(100% - 80px));
+    margin:0 auto;
+}
+
+.footer-question{
+    font-size:16px;
+    margin-bottom:42px;
+}
+
+.footer-question a,
+.footer-links a{
+    color:#b3b3b3;
+    text-decoration:underline;
+}
+
+.footer-links{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    column-gap:55px;
+    row-gap:18px;
+}
+
+.footer-links div{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.footer-links a{
+    font-size:14px;
+    line-height:1.2;
+}
+
+.footer-language{
+    margin-top:55px;
+    height:44px;
+    min-width:165px;
+    padding:0 18px;
+    border:1px solid #666;
+    border-radius:4px;
+    background:#000;
+    color:#fff;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.footer-language span{
+    margin-left:10px;
+}
+
+.netflix-india{
+    margin-top:45px;
+    font-size:14px;
+    color:#b3b3b3;
+}
+
+.recaptcha-note{
+    margin-top:55px;
+    font-size:13px;
+    color:#777;
+}
+
+@media(max-width:700px){
+    .site-footer{
+        padding:50px 0;
+    }
+
+    .footer-inner{
+        width:calc(100% - 45px);
+    }
+
+    .footer-links{
+        grid-template-columns:repeat(2,1fr);
+        gap:30px 25px;
+    }
+
+    .footer-question{
+        margin-bottom:32px;
+    }
+}
+
+@media(max-width:450px){
+    .footer-links{
+        grid-template-columns:1fr;
+    }
+}
