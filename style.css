@@ -1,128 +1,43 @@
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:"Inter",Arial,sans-serif;background:#050505;color:#fff;overflow-x:hidden}
+body{font-family:"Inter",Arial,sans-serif;background:#000;color:#fff;overflow-x:hidden}
 
-.hero{
-  position:relative;
-  min-height:760px;
-  overflow:hidden;
-  isolation:isolate;
-  background:
-    radial-gradient(circle at 76% 42%,rgba(120,10,20,.20),transparent 34%),
-    linear-gradient(90deg,#000 0%,rgba(0,0,0,.96) 25%,rgba(0,0,0,.68) 48%,rgba(0,0,0,.34) 72%,rgba(0,0,0,.78) 100%),
-    #050505;
-}
-.hero:after{
-  content:"";position:absolute;inset:0;z-index:2;pointer-events:none;
-  background:
-    linear-gradient(90deg,rgba(0,0,0,.86) 0%,rgba(0,0,0,.48) 34%,rgba(0,0,0,.04) 67%,rgba(0,0,0,.35) 100%),
-    linear-gradient(180deg,rgba(0,0,0,.05) 55%,#050505 100%);
-}
-.hero-collage{
-  position:absolute;z-index:1;right:-50px;top:-65px;
-  width:66%;height:820px;
-  transform:rotate(-2deg);
-  opacity:.9;
-}
-.collage-card{
-  position:absolute;width:245px;height:350px;
-  object-fit:cover;border-radius:9px;
-  border:2px solid rgba(255,255,255,.08);
-  box-shadow:0 18px 45px rgba(0,0,0,.65);
-  filter:brightness(.72) saturate(1.08);
-}
-.c1{left:4%;top:30px;transform:rotate(-8deg)}
-.c2{left:33%;top:-10px;transform:rotate(7deg)}
-.c3{left:63%;top:45px;transform:rotate(10deg)}
-.c4{left:15%;top:405px;transform:rotate(7deg)}
-.c5{left:45%;top:385px;transform:rotate(-5deg)}
-.c6{left:75%;top:390px;transform:rotate(7deg)}
-
-.navbar{
-  height:96px;padding:0 64px;display:flex;align-items:center;
-  position:relative;z-index:5
-}
-.logo{color:#e50914;font-size:40px;font-weight:800;letter-spacing:-2px;margin-right:60px}
-.navbar nav{display:flex;align-items:center;gap:34px}
+.navbar{height:90px;padding:0 60px;display:flex;align-items:center;position:absolute;top:0;left:0;width:100%;z-index:10}
+.logo{color:#e50914;font-size:40px;font-weight:900;letter-spacing:-2px;margin-right:60px}
+.navbar nav{display:flex;align-items:center;gap:32px}
 .navbar nav a{color:#fff;text-decoration:none;font-size:15px;font-weight:600;transition:.2s}
-.navbar nav a:hover{color:#cfcfcf}
-.nav-right{margin-left:auto;display:flex;align-items:center;gap:28px}
-.language{
-  height:44px;padding:0 17px;border:1px solid rgba(255,255,255,.75);
-  border-radius:6px;background:rgba(0,0,0,.55);color:#fff;font-size:15px;cursor:pointer
-}
-.language span{margin-left:13px;font-size:18px}
-.sign-in{
-  height:44px;padding:0 24px;border:0;border-radius:6px;
-  background:#e50914;color:#fff;font-size:15px;font-weight:700;cursor:pointer
-}
-.sign-in:hover,.email-box button:hover{background:#f6121d}
+.navbar nav a:hover{color:#bdbdbd}
+.nav-right{margin-left:auto;display:flex;align-items:center;gap:20px}
+.language{height:42px;padding:0 16px;border:1px solid rgba(255,255,255,.8);border-radius:5px;background:rgba(0,0,0,.55);color:#fff;font-size:15px;cursor:pointer}
+.language span{margin-left:10px;font-size:18px}
+.sign-in{height:42px;padding:0 23px;border:0;border-radius:5px;background:#e50914;color:#fff;font-size:15px;font-weight:700;cursor:pointer;transition:.25s}
+.sign-in:hover{background:#f6121d}
 
-.hero-content{
-  min-height:650px;padding:35px 0 70px 88px;
-  display:flex;align-items:center;position:relative;z-index:4
-}
-.hero-text{max-width:690px;margin-top:-15px}
-.hero-text h1{
-  font-size:clamp(50px,5vw,76px);line-height:1.02;font-weight:800;
-  letter-spacing:-2.4px;margin-bottom:24px;text-shadow:0 4px 22px #000
-}
+.hero{min-height:760px;position:relative;overflow:hidden;display:flex;align-items:center;background-image:linear-gradient(90deg,rgba(0,0,0,.98) 0%,rgba(0,0,0,.88) 25%,rgba(0,0,0,.55) 48%,rgba(0,0,0,.2) 72%,rgba(0,0,0,.55) 100%),linear-gradient(180deg,rgba(0,0,0,.1) 45%,rgba(0,0,0,.85) 90%,#000 100%),url("https://assets.nflxext.com/ffe/siteui/vlv3/0ce6c17e-e188-4f13-aaf2-6366e12ba739/web/IN-en-20260803-TRIFECTA-perspective_7730cca2-6324-4104-bf66-1a1f6e1a3e61_large.jpg");background-size:cover;background-position:center;background-repeat:no-repeat}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.45),transparent 60%);pointer-events:none}
+.hero-content{position:relative;z-index:3;width:100%;padding-left:85px;padding-top:40px}
+.hero-text{max-width:690px}
+.hero-text h1{font-size:clamp(50px,5vw,76px);line-height:1.02;font-weight:800;letter-spacing:-2.5px;margin-bottom:25px;text-shadow:0 4px 20px rgba(0,0,0,.8)}
 .hero-text h2{font-size:28px;font-weight:400;margin-bottom:22px}
 .hero-text p{font-size:18px;line-height:1.5;max-width:610px;color:#eee;margin-bottom:20px}
-.email-box{display:flex;width:680px;gap:8px}
-.email-box input{
-  flex:1;height:68px;padding:0 24px;border-radius:5px;
-  border:1px solid #777;background:rgba(25,25,25,.9);color:#fff;font-size:18px;outline:none
-}
+.email-box{display:flex;gap:8px;width:680px}
+.email-box input{flex:1;height:68px;padding:0 24px;border-radius:5px;border:1px solid #777;background:rgba(20,20,20,.88);color:#fff;font-size:18px;outline:none}
 .email-box input:focus{border-color:#fff}
 .email-box input::placeholder{color:#bcbcbc}
-.email-box button{
-  width:235px;height:68px;border:0;border-radius:5px;background:#e50914;
-  color:#fff;font-size:21px;font-weight:700;cursor:pointer
-}
-.email-box button span{font-size:34px;vertical-align:-3px;margin-left:7px}
+.email-box button{width:235px;height:68px;border:0;border-radius:5px;background:#e50914;color:#fff;font-size:21px;font-weight:700;cursor:pointer;transition:.25s}
+.email-box button:hover{background:#f6121d}
+.email-box button span{font-size:34px;vertical-align:-3px;margin-left:8px}
 
-.trending{
-  position:relative;z-index:6;margin-top:-48px;
-  padding:0 64px 70px;background:#050505
-}
-.trending h2{font-size:27px;margin-bottom:18px;font-weight:700}
-.movie-row{position:relative;display:flex;gap:18px;overflow:hidden;padding:4px 0 12px}
-.movie-card{
-  flex:0 0 230px;height:132px;overflow:hidden;border-radius:7px;
-  background:#151515;transition:transform .25s ease,box-shadow .25s ease
-}
-.movie-card:hover{transform:scale(1.05);z-index:3;box-shadow:0 15px 30px rgba(0,0,0,.8)}
-.movie-card img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
-.next{
-  position:absolute;right:0;top:50%;transform:translateY(-50%);
-  width:58px;height:82px;border:0;border-radius:8px 0 0 8px;
-  background:rgba(0,0,0,.78);color:#fff;font-size:60px;line-height:1;cursor:pointer;z-index:5
-}
-.bottom-gradient{height:100px;background:linear-gradient(180deg,#050505,#000)}
+.trending{position:relative;z-index:5;margin-top:-35px;padding:0 60px 70px;background:#000}
+.trending h2{font-size:27px;margin-bottom:22px;font-weight:700}
+.movie-row{position:relative;display:flex;gap:18px;overflow:hidden;padding:5px 0 15px}
+.movie-card{position:relative;flex:0 0 230px;height:350px;overflow:hidden;border-radius:8px;background:#111;transition:transform .3s ease,box-shadow .3s ease}
+.movie-card:hover{transform:scale(1.05);box-shadow:0 15px 35px rgba(0,0,0,.8);z-index:3}
+.movie-card img{width:100%;height:315px;display:block;object-fit:cover;object-position:center;background:#111}
+.movie-card span{display:block;height:35px;padding:8px 8px 0;color:#fff;font-size:15px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background:#111}
+.next{position:absolute;right:0;top:44%;transform:translateY(-50%);width:58px;height:82px;border:none;border-radius:8px 0 0 8px;background:rgba(0,0,0,.8);color:#fff;font-size:60px;cursor:pointer;z-index:5}
+.project-disclaimer{background:#111;color:#cfcfcf;text-align:center;padding:12px 20px;font-size:13px;border-top:1px solid #222;border-bottom:1px solid #222}
 
-@media(max-width:1100px){
-  .navbar{padding:0 35px}.logo{margin-right:30px}.navbar nav{gap:20px}
-  .hero-content{padding-left:55px}.hero-text h1{font-size:60px}.email-box{width:600px}
-  .hero-collage{width:62%;right:-100px}
-}
-@media(max-width:850px){
-  .hero{min-height:720px}
-  .navbar{height:auto;padding:20px;flex-wrap:wrap;gap:18px}
-  .logo{font-size:34px;margin-right:auto}.navbar nav{order:3;width:100%;overflow-x:auto;gap:24px;padding-bottom:5px}
-  .nav-right{gap:10px}.language{display:none}
-  .hero-collage{right:-220px;top:110px;width:90%;height:650px;opacity:.38}
-  .collage-card{width:190px;height:270px}
-  .hero-content{min-height:600px;padding:55px 30px;align-items:center}
-  .hero-text h1{font-size:50px}.hero-text h2{font-size:23px}.hero-text p{font-size:17px}
-  .email-box{width:100%}.email-box input,.email-box button{height:58px}.email-box button{width:190px;font-size:17px}
-  .trending{padding:0 25px 50px}.movie-card{flex-basis:205px;height:118px}
-}
-@media(max-width:600px){
-  .hero{min-height:690px}.hero-collage{right:-300px;opacity:.24}
-  .hero-content{padding:45px 22px}.hero-text h1{font-size:42px;letter-spacing:-1px}
-  .hero-text h2{font-size:20px}.email-box{flex-direction:column}
-  .email-box input,.email-box button{width:100%}
-  .movie-card{flex-basis:180px;height:105px}.trending h2{font-size:22px}
-  .sign-in{height:40px;padding:0 17px}.logo{font-size:30px}
-}
+@media(max-width:1100px){.navbar{padding:0 35px}.logo{margin-right:30px}.navbar nav{gap:20px}.hero-content{padding-left:55px}.email-box{width:600px}}
+@media(max-width:850px){.navbar{height:auto;padding:20px;flex-wrap:wrap;gap:18px}.logo{font-size:34px;margin-right:auto}.navbar nav{order:3;width:100%;overflow-x:auto;gap:24px;padding-bottom:5px}.nav-right{gap:10px}.language{display:none}.hero{min-height:720px;background-position:60% center}.hero-content{padding:100px 30px 50px}.hero-text h1{font-size:50px}.hero-text h2{font-size:23px}.hero-text p{font-size:17px}.email-box{width:100%}.email-box input{height:58px}.email-box button{width:190px;height:58px;font-size:17px}.trending{padding:0 25px 50px}.movie-card{flex-basis:210px;height:325px}.movie-card img{height:290px}}
+@media(max-width:600px){.logo{font-size:30px}.sign-in{height:40px;padding:0 17px}.hero{min-height:690px;background-position:65% center}.hero-content{padding:100px 22px 45px}.hero-text h1{font-size:42px;letter-spacing:-1px}.hero-text h2{font-size:20px}.email-box{flex-direction:column}.email-box input,.email-box button{width:100%}.movie-card{flex-basis:175px;height:285px}.movie-card img{height:250px}.trending h2{font-size:22px}}
