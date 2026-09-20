@@ -1,65 +1,27 @@
-const searchInput = document.getElementById("searchInput");
-const movieCards = document.querySelectorAll(".movie-card");
+const emailInput = document.getElementById("emailInput");
+const getStarted = document.getElementById("getStarted");
 
-searchInput.addEventListener("input", function () {
-
-  const searchValue = this.value.toLowerCase().trim();
-
-  movieCards.forEach(card => {
-
-    const title = card
-      .querySelector(".movie-title")
-      .textContent
-      .toLowerCase();
-
-    if (title.includes(searchValue)) {
-      card.style.display = "block";
-    } else {
-      card.style.display = "none";
-    }
-
-  });
-
+getStarted.addEventListener("click", () => {
+  const email = emailInput.value.trim();
+  if (!email) {
+    emailInput.focus();
+    alert("Please enter your email address.");
+    return;
+  }
+  if (!email.includes("@")) {
+    emailInput.focus();
+    alert("Please enter a valid email address.");
+    return;
+  }
+  alert("Demo only: welcome to Netflix Clone!");
 });
 
-
-/* PLAY BUTTON */
-
-const playButton = document.querySelector(".play-btn");
-
-playButton.addEventListener("click", () => {
-
-  alert("▶ Starting The Last Adventure...");
-
+document.querySelector(".sign-in").addEventListener("click", () => {
+  alert("Demo Sign In");
 });
 
-
-/* MORE INFO */
-
-const infoButton = document.querySelector(".info-btn");
-
-infoButton.addEventListener("click", () => {
-
-  alert(
-    "The Last Adventure\n\n" +
-    "Genre: Action / Adventure\n" +
-    "Duration: 2h 18m"
-  );
-
-});
-
-
-/* MOVIE CLICK */
-
-movieCards.forEach(card => {
-
+document.querySelectorAll(".movie-card").forEach(card => {
   card.addEventListener("click", () => {
-
-    const title =
-      card.querySelector(".movie-title").textContent;
-
-    alert("You selected: " + title);
-
+    alert("Selected: " + card.querySelector("strong").innerText.replace(/\n/g, " "));
   });
-
 });
